@@ -10,7 +10,7 @@ int[] FillArray(int[] array)
     int max = Convert.ToInt32(Console.ReadLine());
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max+1);
+        array[i] = new Random().Next(min, max + 1);
     }
     return array;
 }
@@ -25,7 +25,18 @@ string PrintArray(int[] array)
     return text;
 }
 
-
+int FindLenght(int[] array)
+{
+    int newLenght = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        {
+            newLenght++;
+        }
+    }
+    return newLenght;
+}
 
 
 
@@ -34,6 +45,9 @@ void TestMethods()
     int[] firstArray = CreateArray();
     FillArray(firstArray);
     Console.WriteLine(PrintArray(firstArray));
+    Console.WriteLine();
+    int lenth = FindLenght(firstArray);
+    Console.WriteLine(lenth);
 }
 
 TestMethods();

@@ -55,15 +55,17 @@ int[] FillNewArray(int[] array)
     return newArray;
 }
 
-
-
 void TestMethods()
 {
+    Console.WriteLine("Введите длинну массива");
     int[] firstArray = CreateArray();
+    Console.WriteLine("Укажите минимальное и максимальное значение");
     FillArray(firstArray);
+    Console.Write("Первый массив = ");
     Console.WriteLine(PrintArray(firstArray));
     Console.WriteLine();
     int[] secondArray = FillNewArray(firstArray);
+    Console.Write("только чётные числа из первого массива = ");
     Console.WriteLine(PrintArray(secondArray));
 }
 

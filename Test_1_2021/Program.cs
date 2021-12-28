@@ -38,6 +38,23 @@ int FindLenght(int[] array)
     return newLenght;
 }
 
+int[] FillNewArray(int[] array)
+{
+    int newLenth = FindLenght(array);
+    int[] newArray = new int[newLenth];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        
+        if (array[i] % 2 == 0)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
+
 
 
 void TestMethods()
@@ -46,8 +63,8 @@ void TestMethods()
     FillArray(firstArray);
     Console.WriteLine(PrintArray(firstArray));
     Console.WriteLine();
-    int lenth = FindLenght(firstArray);
-    Console.WriteLine(lenth);
+    int[] secondArray = FillNewArray(firstArray);
+    Console.WriteLine(PrintArray(secondArray));
 }
 
 TestMethods();
